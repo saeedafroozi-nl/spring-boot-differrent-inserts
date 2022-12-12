@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mysqlserver:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=sa
+      - MYSQL_USER=sa
+      - MYSQL_PASSWORD=sa
+      - MYSQL_DATABASE=test
+    volumes:
+      - /var/lib/mysql
+      - /etc/mysql/conf.d
